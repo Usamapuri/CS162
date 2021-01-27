@@ -1,2 +1,0 @@
-from .runserver import app
-
