@@ -192,7 +192,7 @@ interface.  How much of the complexity of the library can be hidden from an
 enduser?
 
 ```bash
-cd "Session 3.2" && python3 frontend.py
+cd "Session 3.2" && python3 Visual_Calculator.py
 ```
 
 *Come to class with your example code and be able to explain both the design behind the Tkinter library and how polymorphism helps build a flexible graphics library.*
