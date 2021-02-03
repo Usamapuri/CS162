@@ -53,7 +53,9 @@ Search the internet for images using the search term "Tkinter class diagram".
 <li>Find a useful diagram which explains the structure of the library.</li>
 <li>What insights does the diagram provide that you didn't get from reading the
 documentation?</li>
+  Not sure! This diagram appears to be the best I could find on the TKinter library but it doesn't actually push my understanding any further.
 <li>What insights would you have to read the documentation to get?</li>
+  From my understanding of ULM, it does not specify langauge specific data type value errors so would probably have to read the library to understand that.
   
   ![alt text](https://github.com/Usamapuri/CS162/blob/main/session4_1/Tkinter.png)
 </ol>
