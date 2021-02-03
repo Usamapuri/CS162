@@ -54,12 +54,16 @@ Search the internet for images using the search term "Tkinter class diagram".
 <li>What insights does the diagram provide that you didn't get from reading the
 documentation?</li>
 <li>What insights would you have to read the documentation to get?</li>
+  
+  ![alt text](https://github.com/Usamapuri/CS162/blob/main/session4_1/Tkinter.png)
 </ol>
 
 ### 2. Logging
 Draw a class diagram of the Logging library, including some of the logging
 handlers, filters, formatters and LogRecord classes. Does this do a better job
 of describing the library than you were able to last session?
+
+![alt text](https://github.com/Usamapuri/CS162/blob/main/session4_1/Logging.png)
 
 ### 3. Class Project
 Using your new insight, decompose your class project into as many classes as you
@@ -70,6 +74,8 @@ students.  How well does your design separate out different concerns?
 *Discussing your class project question with fellow students before class is
 discouraged as we will be interested in the variety of solutions that students
 obtained in class.*
+
+![alt text](https://github.com/Usamapuri/CS162/blob/main/session4_1/Home%20Challenges.png)
 
 ### 4. (Optional) Automatic Code analysis
 Some tools are able to automatically analyze code and produce class diagrams.
