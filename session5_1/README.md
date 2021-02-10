@@ -35,13 +35,8 @@ encouraged to write unit tests for your project in the meantime!*
 ## Questions
 **Bring both your code, and the output from running your code, to class.**
 
-Explain the difference between a normal queue, a priority queue, and a LIFO queue.  Give a real-world example where one might find each type of queue.
-
-    a. Queue: first in, first out data structure (imagine waiting in line at the bank)
-
-    b. Priority Queue: first in, highest priority first out (imagine waiting in line at the emergency room)
-
-    c. Last In, First Out: commonly known as a stack data structure, last in, first out (imagine a dishwasher cleaning a stack of plates)
+1. Explain the difference between a normal queue, a priority queue, and a LIFO
+queue.  Give a real-world example where one might find each type of queue.
 
 2. Create your own python file `rule90.py` and import the `AbstractSimulation`
 from `template.py`.  Now write an implementation of Wolfram's Rule 90 cellular
@@ -52,12 +47,13 @@ runnable using the `run()` method. If it simplifies your code, then you can
 assume a finite-sized list of automata.  You can also choose the simplest
 initialization for your automaton.
 
-3. Using your code from the previous session on creating a `ClockIterator`, write test code for the situations given below.
-
-        a. The first thing returned from a `ClockIterator` should be the string  "00:00".
-        b. The 60th thing returned  from a `ClockIterator` should be the string "00:59".
-        c. The 61st thing returned  from a `ClockIterator` should be the string "01:00".
-        d. The 1440th thing returned  from a `ClockIterator` should be the string "23:59"
+3. Using your code from the previous session on creating a `ClockIterator`,
+write test code for the situations given below.
+    1. The first thing returned from a `ClockIterator` should be the string  "00:00".
+    2. The 60th thing returned  from a `ClockIterator` should be the string "00:59".
+    3. The 61st thing returned  from a `ClockIterator` should be the string "01:00".
+    4. The 1440th thing returned  from a `ClockIterator` should be the string "23:59".
+    5. The 1441st thing returned  from a `ClockIterator` should be the string "00:00".
 
 4. Think about the subsystem for the final project that you are working on.  
 What unit tests could you write to test the functionality of that system.  
