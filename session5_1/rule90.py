@@ -1,9 +1,8 @@
+#Usama
 # Pseudocode used from https://www.youtube.com/watch?v=W1zKu3fDQR8&ab_channel=TheCodingTrain
 
-from template import AbstractSimulation
+#from template import AbstractSimulation
 import random
-
-
 class rule90(AbstractSimulation):
     def __init__(self, number_of_steps):
         super().__init__(number_of_steps)
@@ -22,7 +21,7 @@ class rule90(AbstractSimulation):
     def run_one_step(self):
         '''Changing All Values in array simultaneously
         '''
-        temp_copy = sefl.arr
+        temp_copy = self.arr
         for i in range(len(temp_copy)):
             if i == 0:
                 self.arr[0] = (False!= temp_copy[1])
@@ -34,6 +33,6 @@ class rule90(AbstractSimulation):
     def print_sim_state(self):
         print("On Step {}, arr looks like {}.".format(self.iter, self.arr))
 
-    if __name__=="__main__":
-        lets_see = rule90(5)
-        lets_see.run()
+if __name__=="__main__":
+    lets_see = rule90(5)
+    lets_see.run()
