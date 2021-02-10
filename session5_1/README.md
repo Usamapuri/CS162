@@ -35,14 +35,14 @@ encouraged to write unit tests for your project in the meantime!*
 ## Questions
 **Bring both your code, and the output from running your code, to class.**
 
-1. Explain the difference between a normal queue, a priority queue, and a LIFO
-queue.  Give a real-world example where one might find each type of queue.
+    1. Explain the difference between a normal queue, a priority queue, and a LIFO
+    queue.  Give a real-world example where one might find each type of queue.
 
-''' 1. Queue: first in, first out data structure (imagine waiting in line at the bank)
+    a. Queue: first in, first out data structure (imagine waiting in line at the bank)
 
-2. Priority Queue: first in, highest priority first out (imagine waiting in line at the emergency room)
+    b. Priority Queue: first in, highest priority first out (imagine waiting in line at the emergency room)
 
-3. Last In, First Out: commonly known as a stack data structure, last in, first out (imagine a dishwasher cleaning a stack of plates)'''
+    c. Last In, First Out: commonly known as a stack data structure, last in, first out (imagine a dishwasher cleaning a stack of plates)
 
 2. Create your own python file `rule90.py` and import the `AbstractSimulation`
 from `template.py`.  Now write an implementation of Wolfram's Rule 90 cellular
