@@ -1,0 +1,62 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-01-24 20:51-0800\n"
+"PO-Revision-Date: 2021-01-25 05:21+0000\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: Unknown\n"
+"Language: zxx\n"
+"Plural-Forms: nplurals=2; plural=n!=1;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=cp1252\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Loco-Source-Locale: en_US\n"
+"Generated-By: pygettext.py 1.5\n"
+"\n"
+"X-Loco-Parser: loco_parse_po\n"
+"X-Generator: Loco https://localise.biz/"
+
+#: blackjack.py:143
+msgid "The dealer is showing: "
+msgstr "Dealer Apnay Pattay Dikha Rha Hay"
+
+#: blackjack.py:144
+msgid "Your hand is: "
+msgstr ""
+
+#: blackjack.py:155
+msgid "Would you like another card? (y/n):"
+msgstr "Kia Apko Aik AUr Card Chahiye? (y/n)"
+
+#: blackjack.py:194
+msgid "You have gone bust!"
+msgstr "Bund Bandook Ho gayi"
+
+#: blackjack.py:198 blackjack.py:203
+msgid "The dealer has: "
+msgstr "Dealer Kay Pattay Yeh Hain"
+
+#: blackjack.py:202
+msgid "The dealer hits"
+msgstr "Dealer Ko Aik Aur Patta Chahiye"
+
+#: blackjack.py:206
+msgid "The dealer has gone bust!"
+msgstr "Dealer Ki Bund Bandook"
+
+#: blackjack.py:208
+msgid "The dealer sticks with: "
+msgstr "Dealer Ko Aur Patta nhee Chahiye"
+
+#: blackjack.py:214
+msgid "It's a draw!"
+msgstr "Dealer Jeet Gayya"
+
+#: blackjack.py:216
+msgid "The dealer won!"
+msgstr "Dealer Jeet Gayya"
+
+#: blackjack.py:218
+msgid "You won!"
+msgstr "Aap Jeet Gaye"
