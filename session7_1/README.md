@@ -26,6 +26,9 @@ https://github.com/pallets/flask/tree/master/examples/tutorial
 
 Follow the youtube video at: https://www.youtube.com/watch?v=4kD-GRF5VPs
 
+I used this youtube tutorial instead https://user-images.githubusercontent.com/55175411/109708010-b25cef80-7b4f-11eb-8c14-a172ab21ef5c.png
+
+
 ```bash
 pip3 install flask Flask-SQLAlchemy
 ```
