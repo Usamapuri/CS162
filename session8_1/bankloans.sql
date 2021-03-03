@@ -57,28 +57,52 @@ SELECT FIRSTNAME, SURNAME, BALANCE FROM Loans
 
 SELECT '';
 SELECT '2. Find all loans older than Jan 2017';
+SELECT * FROM Loans
+	WHERE STARTDATE < '2017-01-01 00:00:00';
 SELECT '----------------------------------------------------';
 
 SELECT '';
 SELECT '3. Find all clients who have more than one loan';
+SELECT Clients.*, COUNT(*) AS num_loans FROM Clients
+	JOIN Loans on loans.CLIENTNUMBER = clients.CLIENTNUMBER
+	GROUP By loans.CLIENTNUMBER
+	HAVING num_loans > 1sE
 SELECT '----------------------------------------------------';
 
 SELECT '';
 SELECT "4. Find the total balance outstanding over all loans that aren't in arrears";
+SELECT SUM(BALANCE) FROM Loans
+	WHERE STATUS <> 'Arrears';
 SELECT '----------------------------------------------------';
 
 SELECT '';
 SELECT '5. Are all account numbers unique? (How should we fix this in general)';
+SELECT COUNT(*) FROM Loans
+	GROUP BY ACCOUNTNUMBER
+	HAVING count((ACCOUNTNUMBER)>1);
 SELECT '----------------------------------------------------';
 
 SELECT '';
 SELECT '6. Martina has undergone gender reassignment and is now Martin';
+UPDATE Clients
+SET
+	FIRSTNAME = "Martin"
+WHERE
+	CLIENTNUMBER = 4;
 SELECT '----------------------------------------------------';
 
 SELECT '';
 SELECT '7. Get a list of email addresses for all clients who paid off a loan';
+SELECT Clients.EMAIL FROM Clients
+JOIN Loans
+ON LOANS.CLIENTNUMBER = Clients.CLIENTNUMBER
+AND LOANS.STATUS = 'PAID OFF'
 SELECT '----------------------------------------------------';
 
 SELECT '';
 SELECT '8. Print out the largest loan for each client';
+SELECT Clients.FIRSTNAME, MAX(LOANS.PRINCIPALDEBT)FROM Clients
+	JOIN Loans
+	ON LOANS.CLIENTNUMBER = Clients.CLIENTNUMBER
+	GROUP BY CLIENTS.CLIENTNUMBER
 SELECT '----------------------------------------------------';
