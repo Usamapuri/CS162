@@ -47,3 +47,20 @@ INSERT INTO Rides VALUES (7, 3, 2, 18);
 INSERT INTO Rides VALUES (8, 3, 2, 32);
 INSERT INTO Rides VALUES (9, 3, 2, 15);
 INSERT INTO Rides VALUES (10, 3, 3, 2.5);
+
+SELECT '1. how many trips have been made by each driver this month, and how much they will be paid.:';
+SELECT '----------------------------------------------------';
+/* They will be paid by 0.9 of the rides' worth*/
+SELECT Drivers.NAME, COUNT(*) AS NUMBER_RIDES, 0.9*SUM(Rides.BILL) AS PAYMENT 
+    FROM Rides
+    JOIN Drivers ON Drivers.DRIVER_ID = Rides.DRIVER_ID
+    GROUP BY Drivers.DRIVER_ID;
+
+SELECT '';
+SELECT '2. find all the riders who havmt taken any trips this month and their phone number';
+SELECT '----------------------------------------------------';
+
+SELECT * FROM Riders 
+    LEFT OUTER JOIN Rides
+    ON Riders.RIDER_ID = Rides.RIDER_ID
+    GROUP BY Rides.RIDER_ID HAVING SUM(Rides.RIDER_ID) IS NULL;
