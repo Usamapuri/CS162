@@ -55,3 +55,6 @@ SELECT COUNT(*) FROM TEST1 t1
     JOIN TEST2 t2 ON (t1.x) = (t2.x)
     JOIN TEST3 t3 ON (t1.y) = (t3.y)
     WHERE t3.z > t1.z;
+                  
+ SELECT 'Now figure out how to index the table(s) such that the query is able to run
+much faster.'
