@@ -45,11 +45,27 @@ together.  Since this is a nested for loop and the tables are roughly the
 same size then it will take *O(N^3)* time.
 
 1. Now figure out how to index the table(s) such that the query is able to run
-much faster.  
+much faster. 
+```
+we can create different indexes on different tables this will speed up the process. Each index
+will contain columns required to successfully run the query. This will definitely speed up the
+overall lookup time of looking through the tables
+```
 2. Quantify the time taken for each version with the `.timer` command.
-3. Write pseudo code explaining how the fast query is now being implemented.
-4. Give your estimate of the asymptotic scaling behavior in big-Oh notation
+```
+My SQL didnt show time but it got very fast
+```
+4. Write pseudo code explaining how the fast query is now being implemented.
+```
+This indexing will decrease the overall look up time from O(t1*t2*t2) to O(log(t1)+log(t2)+log(t2))
+which is way more efficient than the previous queries without indexing.
+```
+6. Give your estimate of the asymptotic scaling behavior in big-Oh notation
 for the fast query.
+```
+This indexing will decrease the overall look up time from O(t1*t2*t2) to O(log(t1)+log(t2)+log(t2))
+which is way more efficient than the previous queries without indexing.
+```
 5. Give the asymptotic scaling behavior for creating an index.
 
 (Note that SQLite's query planner is smart enough to create temporary indices
@@ -69,13 +85,32 @@ scan through all zip codes.  Instead it is better to find all customers in the
 given zip code and then select the women.  
 
 1. Give pseudo-code for the case that there are no indexes.
-2. Give pseudo-code for the case that there is an index on Gender.  Roughly how
+```sqlite3
+SELECT Name, Phone FROM Customer 
+WHERE ZipCode = '90210' AND Gender = 'f';
+```
+3. Give pseudo-code for the case that there is an index on Gender.  Roughly how
 much more efficient is this than without any indices? (Assuming that your
 customers are evenly split between men and women.)
+``` sqlite3
+CREATE INDEX IDX ON Customer(Gender);
+```
+
 3. Give pseudo-code for the case that there is an index on ZipCode.  Assuming
 that there are roughly 10,000 different zip codes for your customers, how
 much more efficient is this than without any indices?
+``` sqlite3
+CREATE INDEX IDX ON Customer(ZipCode);
+```
 4. Find out about composite indices.  What would a good composite index look
 like in this case?  Write pseudo-code for this case.
+The composite index is to create an index on the combination of multiple columns, these columns may contain all the columns of the query, or may not contain.
+``` sqlite3
+CREATE INDEX IDX ON Customer(ZipCode);
+```
 4. Find out what a covering index is.  What would it look like in this case?
 Is a covering index more or less efficient than a composite index, and why?
+A Covering index contains the data to be searched through include, so that the SQL query can get the required data without reaching the basic table. 
+``` sqlite3
+CREATE INDEX IDX ON Customer(ZipCode, Gender);
+```
