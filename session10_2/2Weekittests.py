@@ -27,7 +27,7 @@ class TestQuery(unittest.TestCase):
         db.init_app(self.app)
         with self.app.app_context():
             db.create_all()
-            self.populate_db() # Your function that adds test data.
+            self.populate_db()
 
     def tearDown(self):
         """
