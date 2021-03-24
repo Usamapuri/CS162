@@ -136,20 +136,20 @@ raise any errors.
 Now do the following:
 1. Write an attack which will list all the usernames and their passwords.
 
-'''sqlite3
+```sqlite3
 SELECT * FROM users WHERE name='' or '1'='1' and password='' or '1'='1'
-'''
+```
 2. Write an attack which will update the table so that every entry in the
 friends table has their userid set to 42.  (Hopefully this is the id of *your*
 account, and now everyone has to be friends with you.  Who said hackers were
 loners and never had any friends!)
-'''sqlite3
+```sqlite3
 UPDATE friends SET userid='42' WHERE username='' or '1'='1'
-'''
+```
 3. Write an attack which will drop both tables.
-'''sqlite3
+```sqlite3
 Tom'); DROP TABLE "users"."friends"; --
-'''
+```
 4. (Optional) If you didn't know the name or schema of the tables, then write an
 SQL injection attack which will list all the tables.  Now write an attack which
 will list all columns within a given table.
@@ -161,7 +161,7 @@ Extend your Kanban board from previous weeks to allow multiple users.  Each
 user should have their own username and password. For now assume that each
 user wants their own **private** board (i.e. there are no shared Kanban boards).
 
-'''python3
+```python3
 
 @app.route('/login', methods=['GET','POST'])
 def login():
@@ -177,7 +177,7 @@ def login():
         return redirect(url_for('homepage'))
     elif request.method == 'GET' :
         return render_template('login.html')
-'''
+```
 
 ### 4. Secure the user passwords
 If you used the example code from `requires_authorization.py` then you will see
